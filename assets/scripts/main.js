@@ -73,6 +73,7 @@ function initFormHandler() {
   // B3. TODO - Add an event listener for the 'submit' event, which fires when the
   //            submit button is clicked
   formEl.addEventListener('submit', (e) => {
+    e.preventDefault();
     const formData = new FormData(formEl);
     let recipeObject = {};
     for (const key of formData.keys()) {
